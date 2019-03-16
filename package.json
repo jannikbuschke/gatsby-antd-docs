@@ -1,7 +1,7 @@
 {
-  "name": "gatsby-antd-docs",
-  "description": "Gatsby Antd Docs Starter",
-  "version": "0.3.0",
+  "name": "glow-docs",
+  "description": "Documentation for the aspnet/react framework glow",
+  "version": "0.1.0",
   "author": "Jannik Buschke",
   "dependencies": {
     "@mdx-js/mdx": "1.6.22",
