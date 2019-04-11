@@ -16,7 +16,6 @@ export function RootLayout({ children, sidebarRoot }: any) {
           site {
             siteMetadata {
               title
-              centerTitle
             }
           }
           allMarkdownRemark {
@@ -50,7 +49,7 @@ export function RootLayout({ children, sidebarRoot }: any) {
           }
         }
 
-        const { title, centerTitle } = data.site.siteMetadata
+        const { title } = data.site.siteMetadata
 
         return (
           <div
@@ -69,7 +68,7 @@ export function RootLayout({ children, sidebarRoot }: any) {
             >
               <html lang="en" />
             </Helmet>
-            <Header siteTitle={title} centerTitle={centerTitle} />
+            <Header siteTitle={title} />
 
             <div
               style={{
