@@ -6,12 +6,11 @@ const { Header: AntdHeader } = Layout
 
 interface Props {
   siteTitle: string
-  centerTitle: string
 }
 
 export class Header extends Component<Props> {
   render() {
-    const { siteTitle, centerTitle } = this.props
+    const { siteTitle } = this.props
     return (
       <AntdHeader>
         <Menu theme="dark" mode="horizontal">

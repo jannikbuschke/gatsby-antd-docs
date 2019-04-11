@@ -16,11 +16,11 @@ const IndexPage = () => {
               fontWeight: 'bold',
             }}
           >
-            Glue
+            Gatsby Antd Markdown Documentation Boilerplate
           </p>
           <h2>
-            .NET Core + React + libraries + boilerplate for modular webbased
-            applications
+            A gatsby starter to manage and render documentation documents
+            (jsx/markdown based)
           </h2>
           <br />
           <Link to="/docs/get-started/introduction">
@@ -31,7 +31,8 @@ const IndexPage = () => {
           <Button
             type="primary"
             size="large"
-            href="https://github.com/cvluca/gatsby-starter-markdown"
+            href="https://github.com/jannikbuschke/gatsby-antd-docs"
+            target="_blank"
           >
             Github
           </Button>
