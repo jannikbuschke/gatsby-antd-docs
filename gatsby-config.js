@@ -65,5 +65,6 @@ module.exports = {
     // To learn more, visit: https://gatsby.app/offline
     // 'gatsby-plugin-offline',
   ],
+  /// this must match the path your webpage is displayed from
   pathPrefix: '/gatsby-antd-docs',
 }
