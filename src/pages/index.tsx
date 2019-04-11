@@ -22,6 +22,10 @@ const IndexPage = () => {
             A gatsby starter to manage and render documentation documents
             (jsx/markdown based)
           </h2>
+          <p>
+            This is a fork of{' '}
+            <a href="https://github.com/cvluca/gatsby-starter-markdown" />
+          </p>
           <br />
           <Link to="/docs/get-started/introduction">
             <Button type="primary" size="large" style={{ marginRight: 10 }}>
