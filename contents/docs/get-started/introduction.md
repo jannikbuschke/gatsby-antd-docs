@@ -17,8 +17,9 @@ Fork of https://github.com/cvluca/gatsby-starter-markdown.
 - [x] General simplifications
 - [ ] Host sample
 - [ ] Add starter to gatsby starter repository
-- [ ] Restore blog feature
 - [ ] Add mdx
+- [ ] Restore blog feature
+- [ ] Improve Header UI
 - [ ] Improve typings
 
 # Overview
