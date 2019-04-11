@@ -8,7 +8,22 @@ parents: ['Get Started']
   Introduction
 </h1>
 
+# Gatsby-Antd-Docs
+
 Fork of https://github.com/cvluca/gatsby-starter-markdown.
+
+This starter is boilerplate for (technical) documentation websites optionally accomponied by a blog (you can use it forever you want of course).
+
+# Getting started
+
+```
+npm install gatsby -g
+gatsby new my-docs https://github.com/jannikbuschke/gatsby-antd-docs
+cd my-docs
+npm run start
+visit http://localhost:8000
+start editing content in content/docs
+```
 
 # Roadmap
 
@@ -21,16 +36,17 @@ Fork of https://github.com/cvluca/gatsby-starter-markdown.
 - [ ] Restore blog feature
 - [ ] Improve Header UI
 - [ ] Improve typings
+- [ ] Fix menu item links not showing active state
 
-# Overview
+# Hosting
 
-<p>
-This starter is powered by gatsby, antd and markdown.
-</p>
+In order to host the site the **sites path** needs to be put into gatsby-config.js export object on to the property _pathPrefix_. Then run
 
-## Use case
+```
+npm run build
+```
 
-This starter is intended for (technical) documentation sides optionally accomponied by a blog (you can use it forever you want of course).
+and copy the content of the public folder to the webspace.
 
 # License
 

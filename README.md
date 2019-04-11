@@ -1,6 +1,8 @@
 # Gatsby-Antd-Docs
 
-fork of https://github.com/cvluca/gatsby-starter-markdown
+Fork of https://github.com/cvluca/gatsby-starter-markdown.
+
+This starter is boilerplate for (technical) documentation websites optionally accomponied by a blog (you can use it forever you want of course).
 
 # Getting started
 
@@ -24,6 +26,7 @@ start editing content in content/docs
 - [ ] Restore blog feature
 - [ ] Improve Header UI
 - [ ] Improve typings
+- [ ] Fix menu item links not showing active state
 
 # Hosting
 
@@ -34,3 +37,7 @@ npm run build
 ```
 
 and copy the content of the public folder to the webspace.
+
+# License
+
+MIT
