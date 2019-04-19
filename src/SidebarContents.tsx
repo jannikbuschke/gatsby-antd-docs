@@ -114,20 +114,18 @@ export const SidebarContents = ({ root }: Props) => {
               </Menu.Item>
             )
           })
-
-        // const path = location.pathname.replace(pathPrefix.slice(0, -1), '')
-
+        const keys =
+          typeof window !== 'undefined'
+            ? [window.location.pathname.substring(1)]
+            : undefined
+        console.log({ keys, tree: loop(tree) })
         const defaultOpenKeys = dir.map(item => item.key)
         return (
           <Menu
             mode="inline"
             style={{ minWidth: 180, height: '100%', borderRight: 0 }}
             defaultOpenKeys={defaultOpenKeys}
-            selectedKeys={
-              typeof window !== 'undefined'
-                ? [window.location.pathname]
-                : undefined
-            }
+            selectedKeys={keys}
           >
             {loop(tree)}
           </Menu>
