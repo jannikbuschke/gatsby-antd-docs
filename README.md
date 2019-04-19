@@ -20,8 +20,6 @@ start editing content in content/docs
 - [x] Add typescript
 - [x] Remove Redux
 - [x] General simplifications
-- [ ] Host sample
-- [ ] Add starter to gatsby starter repository
 - [ ] Add mdx
 - [ ] Restore blog feature
 - [ ] Improve Header UI
