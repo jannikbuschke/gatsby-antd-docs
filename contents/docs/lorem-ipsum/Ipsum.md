@@ -1,7 +1,7 @@
 ---
-title: Quick Start
+title: Ipsum
 root: '/docs'
-parents: ['Get Started']
+parents: ['Lorem Ipsum']
 ---
 
 <h1 align="center">

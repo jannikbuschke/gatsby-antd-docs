@@ -1,7 +1,7 @@
 ---
-title: Overview
+title: Lorem
 root: '/docs'
-parents: ['Get Started']
+parents: ['Lorem Ipsum']
 ---
 
 <h1 align="center">

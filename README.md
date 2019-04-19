@@ -21,6 +21,7 @@ start editing content in content/docs
 - [x] Remove Redux
 - [x] General simplifications
 - [ ] Add mdx
+- [ ] Add syntaxhighlighting with prismjs
 - [ ] Restore blog feature
 - [ ] Improve Header UI
 - [ ] Improve typings
