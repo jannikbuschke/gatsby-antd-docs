@@ -18,7 +18,7 @@ export function RootLayout({ children, sidebarRoot }: any) {
               title
             }
           }
-          allMarkdownRemark {
+          allMdx {
             edges {
               node {
                 fields {
@@ -30,7 +30,7 @@ export function RootLayout({ children, sidebarRoot }: any) {
         }
       `}
       render={data => {
-        const allPosts = data.allMarkdownRemark.edges.map(
+        const allPosts = data.allMdx.edges.map(
           (edge: any) => edge.node.fields.slug
         )
         let onPostPage
@@ -79,17 +79,6 @@ export function RootLayout({ children, sidebarRoot }: any) {
             >
               <SidebarContents root={sidebarRoot} />
               <Layout>
-                {/* <Breadcrumb
-                  style={{ padding: '16px', backgroundColor: '#f0f2f5' }}
-                >
-                  {window.location.pathname.split('/').map(part => (
-                    <Breadcrumb.Item>
-                      <Link to={part} style={{ padding: 4 }}>
-                        {part}
-                      </Link>
-                    </Breadcrumb.Item>
-                  ))}
-                </Breadcrumb> */}
                 <Content
                   style={{
                     background: '#fff',
@@ -114,3 +103,5 @@ export function RootLayout({ children, sidebarRoot }: any) {
     />
   )
 }
+
+export default RootLayout

@@ -22,7 +22,7 @@ export default BlogPage
 
 export const pageQuery = graphql`
   query($path: String!) {
-    allMarkdownRemark(
+    allMdx(
       sort: { order: DESC, fields: [frontmatter___date] }
       filter: { frontmatter: { root: { eq: $path } } }
     ) {

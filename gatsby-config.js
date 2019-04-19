@@ -1,6 +1,6 @@
 module.exports = {
   siteMetadata: {
-    title: 'gatsby-antd-docs',
+    title: 'Gatsby Ant-Design Documentation Starter',
   },
   plugins: [
     `gatsby-plugin-typescript`,
@@ -55,6 +55,34 @@ module.exports = {
             resolve: `gatsby-remark-autolink-headers`,
             options: {
               className: 'post-toc-anchor',
+            },
+          },
+        ],
+      },
+    },
+    {
+      resolve: `gatsby-mdx`,
+      options: {
+        defaultLayouts: {
+          default: require.resolve('./src/Layout.tsx'),
+        },
+        extensions: ['.mdx', '.md'],
+        remarkPlugins: [require('gatsby-transformer-remark')],
+        gatsbyRemarkPlugins: [
+          'gatsby-remark-katex',
+          {
+            resolve: `gatsby-remark-autolink-headers`,
+            options: {
+              className: 'post-toc-anchor',
+            },
+          },
+          {
+            resolve: `gatsby-remark-prismjs`,
+            options: {
+              classPrefix: 'language-',
+              inlineCodeMarker: null,
+              showLineNumbers: true,
+              noInlineHighlight: false,
             },
           },
         ],

@@ -70,7 +70,7 @@ export const SidebarContents = ({ root }: Props) => {
     <StaticQuery
       query={graphql`
         query sidebarContentQuery {
-          allMarkdownRemark(sort: { order: ASC, fields: [fields___slug] }) {
+          allMdx(sort: { order: ASC, fields: [fields___slug] }) {
             edges {
               node {
                 fields {
@@ -88,7 +88,7 @@ export const SidebarContents = ({ root }: Props) => {
       `}
       render={data => {
         const [tree, dir] = convertToTree(
-          data.allMarkdownRemark.edges.filter(node =>
+          data.allMdx.edges.filter(node =>
             node.node.fields.slug.startsWith(root)
           )
         )
