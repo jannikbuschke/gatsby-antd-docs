@@ -1,6 +1,8 @@
 {
   "include": ["./src/**/*"],
   "compilerOptions": {
+    "baseUrl": ".",
+    "paths": { "*": ["types/*"] },
     "target": "esnext",
     "module": "commonjs",
     "lib": ["dom", "es2017"],
