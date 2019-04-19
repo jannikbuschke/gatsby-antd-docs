@@ -5,7 +5,7 @@ import { PostCard } from '../PostCard'
 
 const BlogPage = ({
   data: {
-    allMarkdownRemark: { edges },
+    allMdx: { edges },
   },
 }: any) => {
   const posts = edges
