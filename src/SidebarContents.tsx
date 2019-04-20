@@ -32,7 +32,7 @@ const constructTree = list => {
           ).length === 0
         ) {
           const newNode = {
-            key: 'tree/' + item.parents[i],
+            key: item.path,
             title: item.parents[i],
             children: [],
           }
@@ -116,7 +116,7 @@ export const SidebarContents = ({ root }: Props) => {
           })
         const keys =
           typeof window !== 'undefined'
-            ? [window.location.pathname.substring(1)]
+            ? [pathPrefix + window.location.pathname]
             : undefined
         console.log({ keys, tree: loop(tree) })
         const defaultOpenKeys = dir.map(item => item.key)
