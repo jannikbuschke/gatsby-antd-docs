@@ -1,6 +1,8 @@
-# Gatsby-Antd-Docs
+sample: https://www.jannikbuschke.de/gatsby-antd-docs/
 
-Fork of https://github.com/cvluca/gatsby-starter-markdown.
+# Gatsby Antd-Design Documentation Starter
+
+Forked from https://github.com/cvluca/gatsby-starter-markdown.
 
 This starter is boilerplate for (technical) documentation websites optionally accomponied by a blog (you can use it forever you want of course).
 
@@ -11,21 +13,33 @@ npm install gatsby -g
 gatsby new my-docs https://github.com/jannikbuschke/gatsby-antd-docs
 cd my-docs
 npm run start
-visit http://localhost:8000
-start editing content in content/docs
 ```
+
+Visit http://localhost:8000.
+
+Edit files in `/content/docs` and see live updates.
+
+# Features
+
+- [x] Ant Design
+- [x] Typescript
+- [x] Markdown
+- [x] MDX
+- [x] Syntax highlighting
 
 # Roadmap
 
 - [x] Add typescript
 - [x] Remove Redux
 - [x] General simplifications
-- [ ] Add mdx
-- [ ] Add syntaxhighlighting with prismjs
-- [ ] Restore blog feature
-- [ ] Improve Header UI
-- [ ] Improve typings
+- [x] Add mdx
+- [x] Add syntax highlighting with prismjs
+- [x] Improve Header UI
 - [ ] Fix menu item links not showing active state
+- [ ] Blog feature / second content type
+- [ ] Improved typings
+- [ ] Improved responsiveness
+- [ ] Add Search
 
 # Hosting
 

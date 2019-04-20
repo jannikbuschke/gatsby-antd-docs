@@ -25,7 +25,7 @@ npm run start
 
 Visit http://localhost:8000.
 
-Edit files in `/content/docs` and and see live updates.
+Edit files in `/content/docs` and see live updates.
 
 # Features
 
@@ -33,7 +33,7 @@ Edit files in `/content/docs` and and see live updates.
 - [x] Typescript
 - [x] Markdown
 - [x] MDX
-- [x] Syntaxhighlighting
+- [x] Syntax highlighting
 
 # Roadmap
 
@@ -41,12 +41,13 @@ Edit files in `/content/docs` and and see live updates.
 - [x] Remove Redux
 - [x] General simplifications
 - [x] Add mdx
-- [x] Add syntaxhighlighting with prismjs
+- [x] Add syntax highlighting with prismjs
 - [x] Improve Header UI
 - [ ] Fix menu item links not showing active state
 - [ ] Blog feature / second content type
 - [ ] Improved typings
-- [ ] Responsiveness
+- [ ] Improved responsiveness
+- [ ] Add Search
 
 # Hosting
 
