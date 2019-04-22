@@ -8,7 +8,7 @@ parents: ['Get Started']
   Introduction
 </h1>
 
-# Gatsby Antd-Design Documentation Starter
+# Gatsby Ant-Design Documentation Starter
 
 Forked from https://github.com/cvluca/gatsby-starter-markdown.
 
