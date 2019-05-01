@@ -15,7 +15,7 @@ const IndexPage = () => {
           fontWeight: 'bold',
         }}
       >
-        Gatsby Antd Markdown Documentation Boilerplate
+        Gatsby Ant Design Docs Boilerplate
       </p>
       <h2>A gatsby starter to create documentation websites</h2>
       <p>
@@ -27,14 +27,20 @@ const IndexPage = () => {
       <br />
       <Button.Group size="large">
         <Button
-          size="large"
+          href="https://twitter.com/jannikbuschke"
+          target="_blank"
+        >
+          Twitter
+          <Icon type="twitter" />
+        </Button>
+        <Button
           href="https://github.com/jannikbuschke/gatsby-antd-docs"
           target="_blank"
         >
           Github
           <Icon type="github" />
         </Button>
-        <Button type="primary" size="large" style={{ marginRight: 10 }}>
+        <Button type="primary" >
           <Link to="/docs/get-started/introduction">Get Started</Link>
         </Button>
       </Button.Group>
