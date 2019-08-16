@@ -1,9 +1,6 @@
 import React from 'react'
-// import Button from 'antd/lib/button'
-// import 'antd/lib/button/style/css'
 import { Link } from 'gatsby'
-import { Header } from '../Header'
-import { Button, PageHeader, Icon } from 'antd'
+import { Button, Icon } from 'antd'
 
 const IndexPage = () => {
   return (
@@ -26,10 +23,7 @@ const IndexPage = () => {
       </p>
       <br />
       <Button.Group size="large">
-        <Button
-          href="https://twitter.com/jannikbuschke"
-          target="_blank"
-        >
+        <Button href="https://twitter.com/jannikbuschke" target="_blank">
           Twitter
           <Icon type="twitter" />
         </Button>
@@ -40,7 +34,7 @@ const IndexPage = () => {
           Github
           <Icon type="github" />
         </Button>
-        <Button type="primary" >
+        <Button type="primary">
           <Link to="/docs/get-started/introduction">Get Started</Link>
         </Button>
       </Button.Group>

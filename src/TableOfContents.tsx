@@ -1,4 +1,4 @@
-import React, { Component } from 'react'
+import React from 'react'
 import Anchor from 'antd/lib/anchor'
 import 'antd/lib/anchor/style/css'
 

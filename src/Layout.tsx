@@ -1,9 +1,9 @@
 import React from 'react'
 import Helmet from 'react-helmet'
-import { StaticQuery, graphql, Link } from 'gatsby'
+import { StaticQuery, graphql } from 'gatsby'
 import { Header } from './Header'
 import { pathPrefix } from '../gatsby-config'
-import { Layout, Breadcrumb } from 'antd'
+import { Layout } from 'antd'
 import { SidebarContents } from './SidebarContents'
 import { TableOfContents } from './TableOfContents'
 const { Sider, Content } = Layout

@@ -1,2 +1,2 @@
-export = index;
-declare const index: any;
+export = index
+declare const index: any
