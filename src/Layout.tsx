@@ -52,13 +52,7 @@ export function RootLayout({ children, sidebarRoot }: any) {
         const { title } = data.site.siteMetadata
 
         return (
-          <div
-            style={{
-              display: 'grid',
-              gridTemplateRows: 'auto 1fr',
-              height: '100vh',
-            }}
-          >
+          <div style={{ width: '100%', padding: 0, overflow: 'hidden' }}>
             <Helmet
               title={data.site.siteMetadata.title}
               meta={[

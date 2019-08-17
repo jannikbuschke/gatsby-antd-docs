@@ -30,7 +30,6 @@ Edit files in `/content/docs` and see live updates.
 
 # Roadmap
 
-- [ ] Fix menu item links not showing active state
 - [ ] Blog feature / second content type
 - [ ] Improved typings
 - [ ] Improved responsiveness
