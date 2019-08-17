@@ -7,11 +7,12 @@
     "@mdx-js/mdx": "1.0.10",
     "@mdx-js/react": "1.0.6",
     "@mdx-js/tag": "0.20.3",
-    "gatsby-mdx": "0.6.2",
     "antd": "3.16.3",
     "gatsby": "2.1.37",
     "gatsby-cli": "2.4.16",
     "gatsby-image": "2.0.34",
+    "gatsby-mdx": "0.6.2",
+    "gatsby-plugin-less": "^2.1.2",
     "gatsby-plugin-manifest": "2.0.24",
     "gatsby-plugin-offline": "2.0.25",
     "gatsby-plugin-react-helmet": "3.0.10",
@@ -19,11 +20,12 @@
     "gatsby-plugin-typescript": "^2.0.11",
     "gatsby-remark-autolink-headers": "2.0.16",
     "gatsby-remark-katex": "2.0.6",
+    "gatsby-remark-prismjs": "3.2.8",
     "gatsby-source-filesystem": "2.0.27",
     "gatsby-transformer-json": "2.1.11",
     "gatsby-transformer-remark": "2.3.4",
     "gatsby-transformer-sharp": "2.1.17",
-    "gatsby-remark-prismjs": "3.2.8",
+    "less": "^3.9.0",
     "prismjs": "1.16.0",
     "react": "16.8.4",
     "react-dom": "16.8.4",
@@ -34,18 +36,14 @@
   "keywords": [
     "gatsby"
   ],
-  "browserslist": {
-    "production": [
+  "browserslist": [
       ">0.2%",
       "not dead",
-      "not op_mini all"
-    ],
-    "development": [
+      "not op_mini all",
       "last 1 chrome version",
       "last 1 firefox version",
       "last 1 safari version"
-    ]
-  },
+  ],
   "license": "MIT",
   "scripts": {
     "build": "gatsby build --prefix-paths",
