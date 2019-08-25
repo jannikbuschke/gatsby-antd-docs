@@ -4,7 +4,7 @@ sample: https://www.jannikbuschke.de/gatsby-antd-docs/
 
 Forked from https://github.com/cvluca/gatsby-starter-markdown.
 
-This starter is boilerplate for (technical) documentation websites optionally accomponied by a blog (you can use it forever you want of course).
+This starter is boilerplate for (technical) documentation websites optionally accompanied by a blog (you can use it forever you want of course).
 
 # Getting started
 
@@ -26,6 +26,7 @@ Edit files in `/content/docs` and see live updates.
 - [x] Markdown
 - [x] MDX
 - [x] Syntax highlighting
+- [x] Latex
 
 # Roadmap
 
