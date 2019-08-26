@@ -1,8 +1,9 @@
 ---
-date: "2019-02-14"
+date: '2019-02-14'
 title: Second Blog
-root: "/blog"
+root: '/blog'
 ---
+
 # Second Blog
 
 [Previous Blog](/blog/first-blog)

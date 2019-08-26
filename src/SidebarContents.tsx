@@ -1,10 +1,26 @@
 import React, { Component } from 'react'
 import { graphql, StaticQuery, Link } from 'gatsby'
-import Menu from 'antd/lib/menu'
+import { Affix, Menu } from 'antd'
 import 'antd/lib/menu/style/css'
 import { pathPrefix } from '../gatsby-config'
 
 const SubMenu = Menu.SubMenu
+
+/**
+ * Returns the current browser's pathname
+ *  with the addition of the pathPrefix defiend in gatsby-config
+ * @returns {string} Pathname
+ */
+const getPath = () => {
+  let key = '/' // root as default
+  if (typeof window !== 'undefined')
+    key =
+      pathPrefix !== '/'
+        ? pathPrefix + window.location.pathname
+        : window.location.pathname
+
+  return key
+}
 
 const convertToTree = data => {
   const list = data.map(edge => {
@@ -93,7 +109,7 @@ export const SidebarContents = ({ root }: Props) => {
           )
         )
         sortTree(tree)
-        const loop = data =>
+        const loop = ({ data, activePath }) =>
           data.map(item => {
             if (item.children) {
               sortTree(item.children)
@@ -102,7 +118,7 @@ export const SidebarContents = ({ root }: Props) => {
                   key={item.key}
                   title={<span style={{ fontWeight: 900 }}>{item.title}</span>}
                 >
-                  {loop(item.children)}
+                  {loop({ data: item.children, activePath })}
                 </SubMenu>
               )
             }
@@ -114,21 +130,20 @@ export const SidebarContents = ({ root }: Props) => {
               </Menu.Item>
             )
           })
-        const keys =
-          typeof window !== 'undefined'
-            ? [pathPrefix + window.location.pathname]
-            : undefined
-        console.log({ keys, tree: loop(tree) })
+
+        const currentPath = getPath()
         const defaultOpenKeys = dir.map(item => item.key)
         return (
-          <Menu
-            mode="inline"
-            style={{ minWidth: 180, height: '100%', borderRight: 0 }}
-            defaultOpenKeys={defaultOpenKeys}
-            selectedKeys={keys}
-          >
-            {loop(tree)}
-          </Menu>
+          <Affix>
+            <Menu
+              mode="inline"
+              style={{ minWidth: 180, height: '100%', borderRight: 0 }}
+              defaultOpenKeys={defaultOpenKeys}
+              selectedKeys={[currentPath]}
+            >
+              {loop({ data: tree, activePath: [currentPath] })}
+            </Menu>
+          </Affix>
         )
       }}
     />

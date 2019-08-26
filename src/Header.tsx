@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import { Link } from 'gatsby'
-import { Layout, Menu, Row, Icon, Col } from 'antd'
+import { Menu, Row, Icon } from 'antd'
 
 interface Props {
   siteTitle: string

@@ -1,9 +1,9 @@
 import React from 'react'
 import Helmet from 'react-helmet'
-import { StaticQuery, graphql, Link } from 'gatsby'
+import { StaticQuery, graphql } from 'gatsby'
 import { Header } from './Header'
 import { pathPrefix } from '../gatsby-config'
-import { Layout, Breadcrumb } from 'antd'
+import { Layout } from 'antd'
 import { SidebarContents } from './SidebarContents'
 import { TableOfContents } from './TableOfContents'
 const { Sider, Content } = Layout
@@ -52,13 +52,7 @@ export function RootLayout({ children, sidebarRoot }: any) {
         const { title } = data.site.siteMetadata
 
         return (
-          <div
-            style={{
-              display: 'grid',
-              gridTemplateRows: 'auto 1fr',
-              height: '100vh',
-            }}
-          >
+          <div style={{ width: '100%', padding: 0, overflow: 'hidden' }}>
             <Helmet
               title={data.site.siteMetadata.title}
               meta={[
