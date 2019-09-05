@@ -52,6 +52,12 @@ module.exports = {
         plugins: [
           `gatsby-remark-katex`,
           {
+            resolve: `gatsby-remark-images`,
+            options: {
+              maxWidth: 800,
+            },
+          },
+          {
             resolve: `gatsby-remark-autolink-headers`,
             options: {
               className: 'post-toc-anchor',
@@ -74,6 +80,12 @@ module.exports = {
             resolve: `gatsby-remark-autolink-headers`,
             options: {
               className: 'post-toc-anchor',
+            },
+          },
+          {
+            resolve: `gatsby-remark-images`,
+            options: {
+              maxWidth: 800,
             },
           },
           {
