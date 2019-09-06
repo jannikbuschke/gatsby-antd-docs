@@ -4,7 +4,7 @@ module.exports = {
   },
   plugins: [
     `gatsby-plugin-typescript`,
-    'gatsby-plugin-react-helmet',
+    `gatsby-plugin-react-helmet`,
     {
       resolve: `gatsby-source-filesystem`,
       options: {
@@ -32,8 +32,8 @@ module.exports = {
         path: `${__dirname}/contents`,
       },
     },
-    'gatsby-transformer-sharp',
-    'gatsby-plugin-sharp',
+    `gatsby-transformer-sharp`,
+    `gatsby-plugin-sharp`,
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
@@ -47,47 +47,23 @@ module.exports = {
       },
     },
     {
-      resolve: `gatsby-transformer-remark`,
-      options: {
-        plugins: [
-          `gatsby-remark-katex`,
-          {
-            resolve: `gatsby-remark-images`,
-            options: {
-              maxWidth: 800,
-            },
-          },
-          {
-            resolve: `gatsby-remark-autolink-headers`,
-            options: {
-              className: 'post-toc-anchor',
-            },
-          },
-        ],
-      },
-    },
-    {
-      resolve: `gatsby-mdx`,
+      resolve: `gatsby-plugin-mdx`,
       options: {
         defaultLayouts: {
           default: require.resolve('./src/Layout.tsx'),
         },
         extensions: ['.mdx', '.md'],
-        remarkPlugins: [require('gatsby-transformer-remark')],
+        // workaround: https://github.com/gatsbyjs/gatsby/issues/16422#issuecomment-518985316
+        plugins: [`gatsby-remark-autolink-headers`],
         gatsbyRemarkPlugins: [
-          'gatsby-remark-katex',
-          {
-            resolve: `gatsby-remark-autolink-headers`,
-            options: {
-              className: 'post-toc-anchor',
-            },
-          },
+          `gatsby-remark-katex`,
           {
             resolve: `gatsby-remark-images`,
             options: {
-              maxWidth: 800,
+              maxWidth: 1035,
             },
           },
+          `gatsby-remark-autolink-headers`,
           {
             resolve: `gatsby-remark-prismjs`,
             options: {

@@ -4,7 +4,8 @@ const path = require('path')
 module.exports = exports.createPages = ({ actions, graphql }) => {
   const { createPage } = actions
 
-  const Template = path.resolve(`src/templates/Template.tsx`)
+  const Template = path.resolve(`src/templates/template.tsx`)
+
   // sort: { order: DESC, fields: [frontmatter___date] }, limit: 1000
   return graphql(`
     {
