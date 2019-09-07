@@ -6,22 +6,6 @@ import { pathPrefix } from '../gatsby-config'
 
 const SubMenu = Menu.SubMenu
 
-/**
- * Returns the current browser's pathname
- *  with the addition of the pathPrefix defiend in gatsby-config
- * @returns {string} Pathname
- */
-const getPath = () => {
-  let key = '/' // root as default
-  if (typeof window !== 'undefined')
-    key =
-      pathPrefix !== '/'
-        ? pathPrefix + window.location.pathname
-        : window.location.pathname
-
-  return key
-}
-
 const convertToTree = data => {
   const list = data.map(edge => {
     return {
@@ -131,7 +115,7 @@ export const SidebarContents = ({ root }: Props) => {
             )
           })
 
-        const currentPath = getPath()
+        const currentPath = typeof window !== 'undefined'? window.location.pathname.replace(pathPrefix,"") : "/"
         const defaultOpenKeys = dir.map(item => item.key)
         return (
           <Affix>
