@@ -1,7 +1,4 @@
 ---
-title: Latex
-root: '/docs'
-parents: ['Get Started']
 ---
 
 # Latex Guide

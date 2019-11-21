@@ -1,7 +1,4 @@
 ---
-title: Ipsum
-root: '/docs'
-parents: ['Lorem Ipsum']
 ---
 
 <h1 align="center">

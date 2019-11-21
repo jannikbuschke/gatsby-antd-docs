@@ -49,7 +49,7 @@
     "build": "gatsby build --prefix-paths",
     "develop": "gatsby develop",
     "start": "npm run develop",
-    "format": "prettier --write \"./**/*.[jt]s?(x)\" \"./**/*.md\"",
+    "format": "prettier --write \"./**/*.[jt]s?(x)\" \"./**/*.md\" \"./**/*.json\"",
     "test": "echo \"Error: no test specified\" && exit 1",
     "deploy": "gatsby build --prefix-paths && gh-pages -d public"
   },

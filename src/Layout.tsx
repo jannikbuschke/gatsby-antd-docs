@@ -4,8 +4,9 @@ import { StaticQuery, graphql } from 'gatsby'
 import { Header } from './Header'
 import { pathPrefix } from '../gatsby-config'
 import { Layout } from 'antd'
-import { SidebarContents } from './SidebarContents'
+import { Sidebar } from './sidebar'
 import { TableOfContents } from './TableOfContents'
+
 const { Sider, Content } = Layout
 
 export function RootLayout({ children, sidebarRoot }: any) {
@@ -71,7 +72,7 @@ export function RootLayout({ children, sidebarRoot }: any) {
                 height: '100%',
               }}
             >
-              <SidebarContents root={sidebarRoot} />
+              <Sidebar root={sidebarRoot} />
               <Layout>
                 <Content
                   style={{
