@@ -27,7 +27,7 @@ function isLinkItem(item: MenuItem): item is LinkItem {
 function render(item: MenuItem, id: string) {
   if (isLinkItem(item)) {
     return (
-      <Menu.Item key={id}>
+      <Menu.Item key={item.link}>
         <Link to={item.link}>
           <div>
             {item.name}
