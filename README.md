@@ -35,6 +35,7 @@ Edit files in `/content/docs` and see live updates.
 - [ ] Improved typings
 - [ ] Improved responsiveness
 - [ ] Add Search
+- [ ] svg intergration for excalidraw
 
 # Hosting
 
