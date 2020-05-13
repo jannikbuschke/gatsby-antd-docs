@@ -1,6 +1,7 @@
 import React from 'react'
 import { Link } from 'gatsby'
-import { Button, Icon } from 'antd'
+import { Button } from 'antd'
+import { GithubOutlined, TwitterOutlined } from '@ant-design/icons'
 
 const IndexPage = () => {
   return (
@@ -25,14 +26,14 @@ const IndexPage = () => {
       <Button.Group size="large">
         <Button href="https://twitter.com/jannikbuschke" target="_blank">
           Twitter
-          <Icon type="twitter" />
+          <TwitterOutlined />
         </Button>
         <Button
           href="https://github.com/jannikbuschke/gatsby-antd-docs"
           target="_blank"
         >
           Github
-          <Icon type="github" />
+          <GithubOutlined />
         </Button>
         <Button type="primary">
           <Link to="/docs/get-started/introduction">Get Started</Link>
