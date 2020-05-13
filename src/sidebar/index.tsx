@@ -29,9 +29,7 @@ function render(item: MenuItem, id: string) {
     return (
       <Menu.Item key={item.link}>
         <Link to={item.link}>
-          <div>
-            {item.name}
-          </div>
+          <div>{item.name}</div>
         </Link>
       </Menu.Item>
     )
@@ -58,10 +56,6 @@ export function Sidebar() {
                 id
                 name
                 link
-                items {
-                  name
-                  link
-                }
               }
             }
           }
@@ -74,6 +68,7 @@ export function Sidebar() {
             ? window.location.pathname.replace(pathPrefix, '')
             : '/'
         const defaultOpenKeys = rootItems.map(item => item.id)
+
         return (
           <Affix>
             <Menu
