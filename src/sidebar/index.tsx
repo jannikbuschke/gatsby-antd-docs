@@ -56,18 +56,22 @@ export function Sidebar() {
                 id
                 name
                 link
+                items {
+                  name
+                  link
+                }
               }
             }
           }
         }
       `}
       render={(data: Query) => {
-        const rootItems = data.allSidebarJson.edges.map(v => v.node)
+        const rootItems = data.allSidebarJson.edges.map((v) => v.node)
         const currentPath =
           typeof window !== 'undefined'
             ? window.location.pathname.replace(pathPrefix, '')
             : '/'
-        const defaultOpenKeys = rootItems.map(item => item.id)
+        const defaultOpenKeys = rootItems.map((item) => item.id)
 
         return (
           <Affix>
@@ -77,7 +81,7 @@ export function Sidebar() {
               defaultOpenKeys={defaultOpenKeys}
               selectedKeys={[currentPath]}
             >
-              {rootItems.map(v => render(v, v.id))}
+              {rootItems.map((v) => render(v, v.id))}
             </Menu>
           </Affix>
         )
