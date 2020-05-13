@@ -9,7 +9,7 @@ import { TableOfContents } from './TableOfContents'
 
 const { Sider, Content } = Layout
 
-export function RootLayout({ children, sidebarRoot }: any) {
+export function RootLayout({ children }: React.PropsWithChildren<{}>) {
   return (
     <StaticQuery
       query={graphql`
@@ -30,7 +30,7 @@ export function RootLayout({ children, sidebarRoot }: any) {
           }
         }
       `}
-      render={data => {
+      render={(data) => {
         const allPosts = data.allMdx.edges.map(
           (edge: any) => edge.node.fields.slug
         )
@@ -72,7 +72,7 @@ export function RootLayout({ children, sidebarRoot }: any) {
                 height: '100%',
               }}
             >
-              <Sidebar root={sidebarRoot} />
+              <Sidebar />
               <Layout>
                 <Content
                   style={{

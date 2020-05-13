@@ -4,7 +4,7 @@
     "link": "",
     "items": [
       { "name": "Introduction", "link": "/docs/get-started/introduction" },
-      { "name": "Introduction", "link": "/docs/get-started/latex" }
+      { "name": "Latex", "link": "/docs/get-started/latex" }
     ]
   },
   {
