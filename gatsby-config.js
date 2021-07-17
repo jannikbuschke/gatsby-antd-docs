@@ -1,6 +1,6 @@
 module.exports = {
   siteMetadata: {
-    title: 'Gatsby Ant-Design Documentation Starter',
+    title: 'Glow webframework documentation',
   },
   plugins: [
     `gatsby-plugin-typescript`,
@@ -90,5 +90,5 @@ module.exports = {
     // 'gatsby-plugin-offline',
   ],
   /// this must match the path your webpage is displayed from
-  pathPrefix: process.env.NODE_ENV === 'development' ? '' : '/gatsby-antd-docs',
+  pathPrefix: process.env.NODE_ENV === 'development' ? '' : '/glow',
 }
