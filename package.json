@@ -1,7 +1,7 @@
 {
   "name": "glow-docs",
   "description": "Documentation for the aspnet/react framework glow",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "author": "Jannik Buschke",
   "dependencies": {
     "@mdx-js/mdx": "1.6.22",
