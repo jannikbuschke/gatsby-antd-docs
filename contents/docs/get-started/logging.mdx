@@ -1,0 +1,53 @@
+import { Alert } from 'antd'
+
+# Logging
+
+Glow configures a pre startup logger that does log to files and does not rely on the configuration. After the configuration has been read, the Serilog logger is reconfigured according to the configuration (in case the configuration is malformed, the app will crash and the file log should give usefull information).
+When running in azure the file log can be accessed via the portal, for example with the `kudu` tool.
+
+Open one of the consoles (Powershell or Bash) and navigate to the path `\site\wwwroot\logs` to see all log files.
+
+## Read file logs directly from the app
+
+Always going via the portal can be annoying. With the following approach the log files can be directly served from the backend application.
+
+In your middleware pipeline configuration (usually in `Startup.cs` in the `Configure(...)` method)
+add the following lines to allow reading the logs from within the application:
+
+```csharp
+
+// allows browsing the directory
+app.UseDirectoryBrowser(new DirectoryBrowserOptions
+{
+    FileProvider = new PhysicalFileProvider(
+        Path.Combine(env.ContentRootPath, "logs")),
+    RequestPath = "/logs"
+});
+
+// allows reading specific log files
+app.UseStaticFiles(new StaticFileOptions
+{
+    FileProvider = new PhysicalFileProvider(
+        Path.Combine(env.ContentRootPath, "logs")),
+    RequestPath = "/logs"
+});
+
+```
+
+Your file logs are now accessable under `/logs`. Currently this is unauthenticated an should not be deployed into any production environment.
+
+<Alert
+  type="warning"
+  message={
+    <b>
+      Warning: Only enable in development, as logs might expose sensitive
+      content
+    </b>
+  }
+/>
+
+<Alert
+  style={{ marginTop: 24 }}
+  type="info"
+  message={'TODO: Show how to serve only to admins'}
+/>

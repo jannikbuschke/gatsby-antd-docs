@@ -16,6 +16,10 @@
         "link": "/docs/get-started/aad_auth"
       },
       {
+        "name": "Logging",
+        "link": "/docs/get-started/logging"
+      },
+      {
         "name": "Entity Framework",
         "link": "/docs/get-started/ef"
       },
