@@ -6,10 +6,24 @@ import { pathPrefix } from '../gatsby-config'
 import { Layout } from 'antd'
 import { Sidebar } from './sidebar'
 import { TableOfContents } from './TableOfContents'
+import { getMDXComponent } from 'mdx-bundler/client'
 
 const { Sider, Content } = Layout
 
 export function RootLayout({ children }: React.PropsWithChildren<{}>) {
+  const [code, setCode] = React.useState('')
+  React.useEffect(() => {
+    ;(async () => {
+      const response = await fetch('https://localhost:5002/api/node')
+      const code = await response.text()
+      setCode(code)
+    })()
+  }, [])
+  const Component = React.useMemo(
+    () => (code === '' ? null : getMDXComponent(code)),
+    [code]
+  )
+
   return (
     <StaticQuery
       query={graphql`
@@ -54,6 +68,7 @@ export function RootLayout({ children }: React.PropsWithChildren<{}>) {
 
         return (
           <div style={{ width: '100%', padding: 0, overflow: 'hidden' }}>
+            {Component != null && <Component />}
             <Helmet
               title={data.site.siteMetadata.title}
               meta={[
