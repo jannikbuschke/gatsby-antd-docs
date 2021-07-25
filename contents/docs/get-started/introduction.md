@@ -4,13 +4,9 @@ root: '/docs'
 parents: ['Get Started']
 ---
 
-<h2 align="center">
-A high performant modern web framework
-</h2>
+# A webapplication framework build with react.js and ASP.NET Core
 
-# Introduction
-
-At its core are [React](https://reactjs.org/) and [ASP.NET Core](https://docs.microsoft.com/en-us/aspnet/core/?view=aspnetcore-2.2). These highly popular, modern, high performant technologies are very good at solving their target problems (building general purpose user interfaces and web backends). They follow the philosophy of "doing one thing well" (they are doing quite some more things but lets not get into the details) and leave out more concrete scenarios for others to solve.
+Glow is a webapplication framework intended to build business apps that run in the cloud. At its core are [React](https://reactjs.org/) and [ASP.NET Core](https://docs.microsoft.com/en-us/aspnet/core): highly popular, modern, high performant technologies that are very good at solving their target problems (building general purpose user interfaces and web backends). They follow the philosophy of "doing one thing well" (they are doing quite some more things but lets not get into the details yet) and leave out more concrete scenarios for others to solve.
 
 One such scenario are typical business CRUD style web applications, that maybe described by with the following characteristics:
 
@@ -58,24 +54,24 @@ In that sense the glue project tries to give a highly productive setup while not
 - UI Controls (Ant Design)
 - Navigation and Layouts (Ant Design + Reach Router)
 - Forms (Formik + Ant Design + server side Asp Net Core validation)
-- CQRS (Odata for reads + MediatR for commands)
+- CQRS
 - Data Access (Entity Framework, MS SQL Server, PostgreSQL)
-- Datagrid (dx-grid + Odata)
 - Logging (Serilog)
+- Strongly typed TypeScript client
 
-# Upcoming Features
+<!-- # Upcoming Features
 
 - Ready-to-use Business Modules (i.e. Audit-Log, Approvals, Workflow etc...)
 - Security (Asp .Net Core + IdentityServer)
 - Datafetching (Suspense)
-- Live/Bidirectional communication (SignalR)
+- Live/Bidirectional communication (SignalR) -->
 
-# Evaluating
+<!-- # Evaluating
 
 - Workflow Core (neutral)
 - GraphQL (pessimistic)
 - gRPC (neutral)
-- Csharp Scripting (optimistic)
+- Csharp Scripting (optimistic) -->
 
 # Extended
 
