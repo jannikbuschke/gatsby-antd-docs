@@ -1,6 +1,6 @@
 module.exports = {
   siteMetadata: {
-    title: 'Glow webframework documentation',
+    title: 'Glow',
   },
   plugins: [
     `gatsby-plugin-typescript`,
