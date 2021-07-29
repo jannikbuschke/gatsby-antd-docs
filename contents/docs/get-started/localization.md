@@ -10,22 +10,12 @@ parents: ['Get Started']
 
 ## Static Localization
 
-We use the libraries `i18next` and `react-i18next` to localize content in the UI layer. I.e. buttons, headers, descriptions and such content that does not change can be translated.
+We use the libraries `i18next`, `react-i18next` and `i18next-browser-languagedetector` to localize content in the UI layer. I.e. buttons, headers, descriptions and such content that does not change can be translated.
 
 Provide all translation keys and translations and initialize i18n with a helper function from glow
 
 ```jsx
-export type keys =
-  | 'meetings'
-  | 'topics'
-  | 'newTopic'
-  | 'myTopics'
-  | 'topicDetails'
-  | 'topicDetailsMessage'
-  | 'title'
-  | 'meeting'
-  | 'dateTime'
-  | 'topicCount'
+export type keys = 'meeting' | 'meetings'
 
 type Translations = Record<keys, string>
 
@@ -35,18 +25,11 @@ const en: Translations = {
 }
 
 const de: Translations = {
-  meeting: 'Meeting',
-  meetings: 'Meetings',
+  meeting: 'Sitzung',
+  meetings: 'Sitzungen',
 }
 
 type Definitions = Record<'en' | 'de', Translations>
-
-export const sharedTranslations: Definitions = {
-  en,
-  de,
-}
-
-type Translations = Record<keys, string>
 
 const resource = {
   en,
@@ -59,6 +42,7 @@ initializeI18n(resource)
 Translate content
 
 ```jsx
+// import {useTranslation}from"react-i18next"
 const { t } = useTranslation()
 return <div>{t('meeting')}</div>
 ```
@@ -66,9 +50,14 @@ return <div>{t('meeting')}</div>
 To change the current language
 
 ```jsx
-const { t, i18n } = useTranslation()
-<Menu.Item onClick={() => i18n.changeLanguage("de")}>de</Menu.Item>
-<Menu.Item onClick={() => i18n.changeLanguage("en")}>en</Menu.Item>
+const { i18n } = useTranslation()
+
+return (
+  <Menu>
+    <Menu.Item onClick={() => i18n.changeLanguage('de')}>de</Menu.Item>
+    <Menu.Item onClick={() => i18n.changeLanguage('en')}>en</Menu.Item>
+  </Menu>
+)
 ```
 
 ## Localization of DB entries
