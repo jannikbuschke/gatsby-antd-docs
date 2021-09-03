@@ -1,12 +1,12 @@
-import React from 'react'
+import * as React from 'react'
 import Anchor from 'antd/lib/anchor'
 import 'antd/lib/anchor/style/css'
 
 const { Link } = Anchor
 
-const filterAnchorDetails = anchors => {
+const filterAnchorDetails = (anchors) => {
   let last_depth = 0
-  anchors = [].slice.call(anchors).map(anchor => {
+  anchors = [].slice.call(anchors).map((anchor) => {
     let depth = parseInt(anchor.parentElement.nodeName[1])
     if (last_depth !== 0 && depth > last_depth) depth = last_depth + 1
     last_depth = depth
@@ -21,7 +21,7 @@ const filterAnchorDetails = anchors => {
   return anchors
 }
 
-const constructTree = list => {
+const constructTree = (list) => {
   let deleteNode = []
   for (let i = 0; i < list.length; i++) {
     for (let j = i + 1; j < list.length; j++) {
@@ -31,7 +31,7 @@ const constructTree = list => {
       } else if (list[i].depth >= list[j].depth) break
     }
   }
-  deleteNode.sort((a, b) => b - a).forEach(index => list.splice(index, 1))
+  deleteNode.sort((a, b) => b - a).forEach((index) => list.splice(index, 1))
 }
 
 export function TableOfContents() {
@@ -42,8 +42,8 @@ export function TableOfContents() {
     setAnchors(filterAnchorDetails(anchors))
   }, [])
 
-  const loop = data =>
-    data.map(item => {
+  const loop = (data) =>
+    data.map((item) => {
       if (item.children.length > 0) {
         return (
           <Link href={item.href} title={item.title} key={item.href}>

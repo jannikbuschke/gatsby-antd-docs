@@ -1,4 +1,4 @@
-import React from 'react'
+import * as React from 'react'
 import { graphql } from 'gatsby'
 import { RootLayout as Layout } from '../Layout'
 import { PostCard } from '../PostCard'
@@ -21,7 +21,7 @@ const BlogPage = ({
 export default BlogPage
 
 export const pageQuery = graphql`
-  query($path: String!) {
+  query ($path: String!) {
     allMdx(
       sort: { order: DESC, fields: [frontmatter___date] }
       filter: { frontmatter: { root: { eq: $path } } }
