@@ -11,7 +11,7 @@
     "esbuild": "0.12.15",
     "gatsby": "alpha-9689ff",
     "gatsby-cli": "alpha-9689ff",
-    "gatsby-image": "3.10.0",
+    "gatsby-plugin-image": "alpha-9689ff",
     "gatsby-plugin-manifest": "alpha-9689ff",
     "gatsby-plugin-mdx": "alpha-9689ff",
     "gatsby-plugin-offline": "alpha-9689ff",
