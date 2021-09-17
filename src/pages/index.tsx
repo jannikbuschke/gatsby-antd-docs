@@ -36,7 +36,7 @@ const IndexPage = () => {
           <GithubOutlined />
         </Button>
         <Button type="primary">
-          <Link to="/docs/get-started/introduction">Get Started</Link>
+          <Link to="/docs/template/get-started/introduction">Get Started</Link>
         </Button>
       </Button.Group>
     </div>
