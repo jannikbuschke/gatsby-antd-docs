@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import { Link } from 'gatsby'
-import { Menu, Row } from 'antd'
+import { Button, Menu, Row } from 'antd'
 import { GithubOutlined, TwitterOutlined } from '@ant-design/icons'
 
 interface Props {
@@ -14,20 +14,20 @@ export class Header extends Component<Props> {
       <Row>
         <Menu mode="horizontal">
           <Menu.Item>
-            <Link to="/docs/get-started/introduction/">{siteTitle}</Link>
+            <Link to="/docs/template/get-started/introduction/">
+              {siteTitle}
+            </Link>
           </Menu.Item>
-          <Menu.Item>
+          <Menu.Item icon={<GithubOutlined />}>
             <a
               href="https://github.com/jannikbuschke/gatsby-antd-docs"
               target="_blank"
             >
-              <GithubOutlined />
               GitHub
             </a>
           </Menu.Item>
-          <Menu.Item>
+          <Menu.Item icon={<TwitterOutlined />}>
             <a href="https://twitter.com/jannikbuschke" target="_blank">
-              <TwitterOutlined />
               Twitter
             </a>
           </Menu.Item>

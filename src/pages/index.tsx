@@ -24,18 +24,24 @@ const IndexPage = () => {
       </p>
       <br />
       <Button.Group size="large">
-        <Button href="https://twitter.com/jannikbuschke" target="_blank">
+        <Button
+          size="large"
+          icon={<TwitterOutlined />}
+          href="https://twitter.com/jannikbuschke"
+          target="_blank"
+        >
           Twitter
-          <TwitterOutlined />
         </Button>
         <Button
+          size="large"
+          icon={<GithubOutlined />}
           href="https://github.com/jannikbuschke/gatsby-antd-docs"
           target="_blank"
         >
           Github
-          <GithubOutlined />
         </Button>
-        <Button type="primary">
+
+        <Button type="primary" size="large">
           <Link to="/docs/template/get-started/introduction">Get Started</Link>
         </Button>
       </Button.Group>
