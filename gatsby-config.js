@@ -34,6 +34,7 @@ module.exports = {
         path: `${__dirname}/contents`,
       },
     },
+    `gatsby-plugin-image`,
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
     {
@@ -89,6 +90,6 @@ module.exports = {
     // To learn more, visit: https://gatsby.app/offline
     // 'gatsby-plugin-offline',
   ],
-  /// this must match the path your webpage is displayed from
-  pathPrefix: process.env.NODE_ENV === 'development' ? '' : '/gatsby-antd-docs',
+  /// this must match the path your webpage is displayed from (the second part of the ternary will be the path prefix for production)
+  pathPrefix: process.env.NODE_ENV === 'development' ? '' : '',
 }

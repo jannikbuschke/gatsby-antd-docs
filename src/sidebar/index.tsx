@@ -1,4 +1,4 @@
-import React from 'react'
+import * as React from 'react'
 import { graphql, StaticQuery, Link } from 'gatsby'
 import { Affix, Menu } from 'antd'
 import 'antd/lib/menu/style/css'
